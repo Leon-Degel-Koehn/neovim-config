@@ -1,6 +1,8 @@
 require("leon.remap")
 vim.cmd [[packadd packer.nvim]]
 vim.cmd([[colorscheme gruvbox]])
+vim.g.netrw_keepdir = 0
+vim.opt.listchars="eol:↵,trail:~,tab:>-,nbsp:␣"
 return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
@@ -26,4 +28,11 @@ return require('packer').startup(function(use)
 	use {'hrsh7th/cmp-nvim-lua'}
 	use {'L3MON4D3/LuaSnip'}
 	use {'rafamadriz/friendly-snippets'}
+	use {
+		"windwp/nvim-autopairs",
+		config = function() require("nvim-autopairs").setup {} end
+	}
+	use {
+		"ray-x/lsp_signature.nvim",
+	}
 end)

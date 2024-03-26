@@ -1,5 +1,5 @@
 local lsp_zero = require('lsp-zero')
-
+require'lspconfig'.qmlls.setup{}
 lsp_zero.on_attach(function(client, bufnr)
   local opts = {buffer = bufnr, remap = false}
 
