@@ -1,8 +1,5 @@
+require("leon.plugins")
 require("leon.remap")
-vim.cmd [[packadd packer.nvim]]
-vim.cmd([[colorscheme gruvbox]])
-vim.g.netrw_keepdir = 0
-vim.opt.listchars="eol:↵,trail:~,tab:>-,nbsp:␣"
 return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
