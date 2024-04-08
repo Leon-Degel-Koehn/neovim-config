@@ -10,3 +10,12 @@ vim.cmd [[packadd packer.nvim]]
 vim.cmd([[colorscheme gruvbox]])
 vim.g.netrw_keepdir = 0
 vim.opt.listchars="eol:↵,trail:~,tab:>-,nbsp:␣"
+vim.keymap.set('n', '<C-l>', function()
+	if vim.o.background == 'dark' then
+		print("Switching to light theme")
+		vim.o.background = 'light'
+	else
+		print("Switching to dark theme")
+		vim.o.background = 'dark'
+	end
+end)
